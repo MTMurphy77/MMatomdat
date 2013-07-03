@@ -1,0 +1,46 @@
+   *
+ initial.dat   1  2850.584  2855.342 vsig=1.6975 ! MgI2852
+ initial.dat   1  2024.785  2028.165 vsig=1.6975 ! MgI2026
+ initial.dat   1  2794.022  2798.686 vsig=1.6975 ! MgII2796
+ initial.dat   1  2801.193  2805.869 vsig=1.6975 ! MgII2803
+ initial.dat   1  1861.238  1864.344 vsig=1.6975 ! AlIII1862
+ initial.dat   1  1853.171  1856.265 vsig=1.6975 ! AlIII1854
+ initial.dat   1  1806.505  1809.521 vsig=1.6975 ! SiII1808
+ initial.dat   1  1525.434  1527.980 vsig=1.6975 ! SiII1526
+ initial.dat   1  1392.598  1394.922 vsig=1.6975 ! SiIV1393
+ initial.dat   1  1401.603  1403.943 vsig=1.6975 ! SiIV1402
+ initial.dat   1  3381.907  3387.552 vsig=1.6975 ! TiII3384
+ initial.dat   1  3240.214  3245.622 vsig=1.6975 ! TiII3242
+ initial.dat   1  3227.428  3232.815 vsig=1.6975 ! TiII3230
+ initial.dat   1  3071.299  3076.426 vsig=1.6975 ! TiII3073
+ initial.dat   1  3064.680  3069.795 vsig=1.6975 ! TiII3067
+ initial.dat   1  1909.360  1912.547 vsig=1.6975 ! TiII1910.9
+ initial.dat   1  1909.019  1912.206 vsig=1.6975 ! TiII1910.6
+ initial.dat   1  2064.441  2067.887 vsig=1.6975 ! CrII2066
+ initial.dat   1  2060.516  2063.956 vsig=1.6975 ! CrII2062
+ initial.dat   1  2054.542  2057.971 vsig=1.6975 ! CrII2056
+ initial.dat   1  2604.285  2608.633 vsig=1.6975 ! MnII2606
+ initial.dat   1  2592.333  2596.660 vsig=1.6975 ! MnII2594
+ initial.dat   1  2574.726  2579.024 vsig=1.6975 ! MnII2576
+ initial.dat   1  2598.004  2602.340 vsig=1.6975 ! FeII2600
+ initial.dat   1  2584.492  2588.806 vsig=1.6975 ! FeII2586
+ initial.dat   1  2380.777  2384.751 vsig=1.6975 ! FeII2382
+ initial.dat   1  2372.480  2376.440 vsig=1.6975 ! FeII2374
+ initial.dat   1  2365.615  2369.564 vsig=1.6975 ! FeII2367
+ initial.dat   1  2342.258  2346.168 vsig=1.6975 ! FeII2344
+ initial.dat   1  2247.999  2251.752 vsig=1.6975 ! FeII2249
+ initial.dat   1  1609.857  1612.544 vsig=1.6975 ! FeII1611
+ initial.dat   1  1607.110  1609.792 vsig=1.6975 ! FeII1608
+ initial.dat   1  2060.940  2064.380 vsig=1.6975 ! ZnII2062
+ initial.dat   1  2024.447  2027.827 vsig=1.6975 ! ZnII2026
+  *
+  AlIII   14.130000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  CrII    13.940000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  FeII    15.750000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  MgI     14.030000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  MgII    15.830000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  MnII    13.780000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  SiII    15.810000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  SiIV    14.810000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  TiII    13.210000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00
+  ZnII    12.930000    0.000000000AA    2.50000      0.0000E-00QA    0.00    0.00 0.00

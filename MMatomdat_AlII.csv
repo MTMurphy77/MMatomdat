@@ -1,0 +1,13 @@
+Updated,18/05/2012,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Summary,,,,,,,,,,,,,,,,,,,
+Ion,Tran.,Type,A,w [/cm],dw [/cm],X,Ref.,l [Angstroms],dl [Angstroms],dv [m/s],Lower state,Upper state,ID,IP- [eV],IP+ [eV],f or %,Gamma [/s],q [/cm],dq [/cm]
+AlII,1670,ALL,26.9815,59851.976,0.004,0,Griesmann:2000:L113,1670.78861,0.00011,20.0,3\rm{s}^2~^1\rm{S}_0,3\rm{s}3\rm{p}~^1\rm{P}_1,c_1,5.99,18.83,1.74,1.39E+09,270,30
+END,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Measurements,,,,,,,,,,,,,,,,,,,
+Transition,w [/cm],dw [/cm],Reference,w [/cm],dw [/cm],Reference/Note,l [Ang.],dl [Ang.],,,,,,,,,,,
+1670,59851.976,0.004,Griesmann:2000:L113,59851.976,0.004,Griesmann:2000:L113,1670.78861,0.00011,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+References,,,,,,,,,,,,,,,,,,,
+Griesmann:2000:L113,http://adsabs.harvard.edu/abs/2000ApJ...536L.113G,,,,,,,,,,,,,,,,,,

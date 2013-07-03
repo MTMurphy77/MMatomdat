@@ -1,0 +1,66 @@
+\documentclass[twocolumn,pra,showpacs]{revtex4}
+
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{nicefrac}
+\usepackage{amsmath}
+\include{phys_jdf}
+
+\def\veps{\varepsilon}
+\def\etal{\emph{et~al.}}
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\Eref}[1]{Eq.~(\ref{#1})}
+\newcommand{\tref}[1]{Table~\ref{#1}}
+\newcommand{\rtw}{\rightarrow}
+\newcommand{\cm}{cm$^{-1}$}
+\newcommand{\vect}[1]{{\bm #1}}
+
+\newcommand{\Rms}{\ensuremath{\langle r^2 \rangle}}
+\newcommand{\GHzamu}{\ensuremath{\textrm{GHz}\cdot\textrm{amu}}}
+\newcommand{\GHz}{\textrm{GHz}}
+
+\begin{document}
+
+\title{Isotope shift in Zn~II}
+
+\author{J. C. Berengut}
+\affiliation{School of Physics, University of New South Wales, Sydney 2052, Australia}
+
+\date{15 April 2010}
+
+\maketitle
+
+The energy shift between isotopes with mass number $A$ and $A'$ of any transition with frequency $\nu$ is given by the formula (see, e.g.~\cite{berengut03pra})
+\begin{equation}
+\label{eq:IS}
+\delta\nu^{A', A} = \left( k_\textrm{NMS} + k_\textrm{SMS} \right) \left( \frac{1}{A'} - \frac{1}{A} \right) + F \delta\Rms^{A', A}
+\end{equation}
+with $\delta\nu^{A', A}=\nu^{A'} - \nu^{A}$. The specific mass shift and field shift constants are denoted $k_\textrm{SMS}$ and $F$ respectively, and the normal mass shift constant is given by
+\begin{equation}
+k_\textrm{NMS} = -\frac{\nu}{1823}
+\end{equation}
+and \Rms\ is the mean-square nuclear charge radius. The value 1823 refers to the ratio of the atomic mass unit to the electron mass. In this paper we develop a method for calculating the specific mass shift and field shift constants, $k_{SMS}$ and $F$ respectively.
+
+Our first task is to extrapolate the measured ZnII~2026 isotope shifts of \cite{matsubara03apb} to the $^{67}$Zn nucleus that was not included in that work. To do this we need to extract the change in mean-square charge radius from the measured atomic Zn isotope shifts in \cite{campbell97jpb}; the result is $\delta\Rms^{67, 66} = 0.03\,(1)\ \textrm{fm}^2$ which is accurate enough for our purposes. $\delta\Rms$ for all even isotopes can be derived from \cite{angeli04adndt}. From the data of \cite{matsubara03apb} we can extract $k_\textrm{SMS} = -1365\,(20)~\GHzamu$, and multiplying the field shift $F \delta\Rms^{66, 64} = 0.35$~GHz by the scaling parameter $\delta\Rms^{67, 66}/\delta\Rms^{66, 64} = 0.19$~\cite{campbell97jpb} we finally obtain
+\[
+\delta\nu^{67, 64} = 1.106\,(40)~\GHz
+\]
+This can also be calculated with the theoretical data of~\cite{berengut03pra} which obtains $\delta\nu^{67, 64} = 1.135\,(100)~\GHz$.
+
+For the ZnII~2062 line there are no measurements, therefore the specific mass shift constant must be calculated. The field shift for this transition will be almost identical to that of the 2026 line~\cite{berengut03pra}. Because the calculated $k_\textrm{SMS}$ for 2026~\cite{berengut03pra} is about 7\% smaller than the experimental value, we have increased the calculated $k_\textrm{SMS}$ for 2062 by 7\%. This leads to a value of $k_\textrm{SMS} = -1412~\GHzamu$. With $k_\textrm{NMS} = -797~\GHzamu$ and the field shifts taken from the measured 2026 lines, we obtain table~\ref{tab:2062}. These values are in agreement with calculations done using the theoretical data of~\cite{berengut03pra}.
+
+\begin{table}[h]
+\caption{\label{tab:2062} Isotope shifts in ZnII~2062 relative to the $^{64}$Zn reference isotope.}
+\begin{tabular}{lr}
+$A'$ & $\delta\nu^{A', 64}$ (MHz) \\
+\hline
+66 & $700\,(50)\ $ \\
+67 & $1130\,(60)\ $ \\
+68 & $1380\,(100)$ \\
+70 & $1960\,(150)$ \\
+\end{tabular}
+\end{table}
+
+\bibliography{references}
+
+\end{document}

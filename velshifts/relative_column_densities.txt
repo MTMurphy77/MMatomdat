@@ -1,0 +1,19 @@
+I used the meteoritic solar abundances shown in Table 1 of Asplund et al. (2009) for all single ionized species.
+
+To obtain sensible typical ratios of AlIII/AlII and SiIV/SiII I used
+the ionic column densities of the DLAs from Jason Prochaska's online
+DLA abundance database from HIRES spectroscopy:
+http://www.ucolick.org/~xavier/DLA/Kingpin . For each ratio, I found
+the median logarithmic column density difference from the sample of
+absorbers which contained both species. In particular, I used the
+following transitions only when searching for ionic column density
+measurements and get the following median ratios:
+
+AlIII1854/AlII1670: -0.581. Adopt -0.60
+SiIV1393/SiII1526 : -0.959. Adopt -1.00
+
+For a sensible typical ratio of MgI/MgII I used the ionic column
+densities in individual clouds from the multi-cloud absorption systems
+in Churchill & Vogt (2001, ApJ, 122, 679). A typical logarithmic
+column density difference from their Table 7 is MgI/MgII = -1.79. I
+adopt -1.80.
