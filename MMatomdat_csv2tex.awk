@@ -185,6 +185,6 @@ END {
 	}
     }
     notes=substr(notes,1,length(notes)-2);
-    sub("\\\\citet{Murphy:2012}","This work",notes);
+    sub("\\\\citet{Murphy:2013}","This work",notes);
     printf "%s.}\n",notes;
 }

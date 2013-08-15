@@ -10,7 +10,7 @@ set OUTISO = `echo $OUTPREFIX"_"$OUTVERS$OUTSUFFIX` ; rm -f $OUTISO
 set OUTNOISO = `echo $OUTPREFIX"_"$OUTVERS"_noiso"$OUTSUFFIX` ; rm -f $OUTNOISO
 set TEMP1 = 'MMatomdat_csv2atom_temp1.dat' ; rm -f $TEMP1 ; touch $TEMP1
 set TEMP2 = 'MMatomdat_csv2atom_temp2.dat' ; rm -f $TEMP2 ; touch $TEMP2
-set WQLAB = 'w,q:Murphy:2012'
+set WQLAB = 'w,q:Murphy:2013'
 set FGLAB = 'f,g:M03'
 
 cp -f $VPATOM $OUTNOISO

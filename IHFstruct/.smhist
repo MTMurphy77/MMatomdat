@@ -1,95 +1,3 @@
-  do i=0,DIMEN(v) - 1 {
-    if ( $(tr[$i]) == $tran ) {
-      set toty = oldtoty + $(f[$i])*exp(-0.5*(totx-$(v[$i]))*(totx-$(v[$i]))/(299792.458/$R)/(299792.458/$R))
-      set oldtoty = toty
-    }
-  }
-  att 3.0 4.0 0 blue connect totx toty
-}
-limits 0.0 1.0 0.0 1.0
-window -1 -1 1 1
-define xlab $($x/6.0)
-define ylab $(0.5+($miny-1)/6.0)
-att 1.6 3.0 0 black
-relocate $xlab $(($miny-1)/3.0-0.065) putlabel 5 Velocity [km\,s^{-1}]
-angle 90
-relocate -0.085 $ylab putlabel 5 Relative intensity [%]
-angle 0
-}
-QUIT
-macro read utilities
-macro read extra_named_colours
-colours
-foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
-#term pdf $element"_IHF.pdf"
-term postfile $element"_IHF.eps"
-location 3000 32000 3000 32000
-data $element".dat"
-read { ion 1.s tr 2 o 3 w 4 v 5 f 6 h 7 id 8.s lab 9.s }
-set v = v/1000.0
-#set f = LG(f/100.0)
-vecminmax v vmin vmax
-set tmp = < $vmax $(abs($vmin)) 0.5 >
-vecminmax tmp dummy vmax
-define vmax $(0.5*(int($vmax/0.5)+2))
-define vmin $(-1.0*$vmax)
-vecminmax f fmin fmax
-define fmin 0.0
-define fmax $(10.0*(int($fmax/10.0)+2))
-vecminmax h dummy hmax
-define fmax $($fmax+$hmax)
-define R 1.e6
-set vlim = < $vmin $vmax >
-plotminmax vlim xmin xmax 0.0
-define xrange $($xmax-$xmin)
-set flim = < $fmin $fmax >
-plotminmax flim ymin ymax 0.08
-define yrange $($ymax-$ymin)
-set utr = uniq(tr)
-define x 1
-define y 4
-define miny 4
-foreach tran utr {
-  define y $($y-1)
-  if ($y==0 || ($y==1 && DIMEN(utr)==4)) {
-    define y 3
-    define x $($x+1)
-  }
-  if ($y<$miny) {
-    define miny $y
-  }
-  define laby 0
-  if ($x==1) {
-    define laby 2
-  }
-  define labx 0
-  if ($y==1 || ($y==2 && (DIMEN(utr)==4 || DIMEN(utr)==2)) || ($y==3 && $x==3 && DIMEN(utr)==7)) {
-    define labx 1
-  }
-  window -3 -3 $x $y
-  limits $xmin $xmax $ymin $ymax
-  att 1.1 3.0 0 black box $labx $laby 0 0
-  att 3.0 3.0 0 gold relocate $xmin 0.0 draw $xmax 0.0
-  att 3.0 3.0 0 cyan2 relocate 0.0 0.0 draw 0.0 $ymax
-  define k -1
-  do i=0,DIMEN(v) - 1 {
-    if ( $(tr[$i]) == $tran ) {
-       if ($k==-1) {
-         define k $i
-         att 1.2 3.0 0 black
-         relocate $($xmin+0.06*$xrange) $($ymax-0.08*$yrange) putlabel 3 $(ion[$k])$(tr[$k])
-         relocate $($xmax-0.07*$xrange) $($ymax-0.08*$yrange) putlabel 1 $(id[$k])
-       }
-       att 3.0 6.0 0 black
-       relocate $(v[$i]) 0.0 draw $(v[$i]) $(f[$i])
-#      relocate $(v[$i]) $ymin draw $(v[$i]) $(f[$i])
-       angle 90
-       att 0.9 3.0 0 black
-       putlabel 6 \,\,\,$(lab[$i])
-       angle 0
-    }
-  }
-  set totx = $xmin,$xmax,$(($xmax-$xmin)/200.0)
   set oldtoty = 0.0*totx
   do i=0,DIMEN(v) - 1 {
     if ( $(tr[$i]) == $tran ) {
@@ -209,6 +117,99 @@ colours
 foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
 #term pdf $element"_IHF.pdf"
 term postfile $element"_IHF.eps"
+location 3000 32000 3000 32000
+data $element".dat"
+read { ion 1.s tr 2 o 3 w 4 v 5 f 6 h 7 id 8.s lab 9.s }
+set v = v/1000.0
+#set f = LG(f/100.0)
+vecminmax v vmin vmax
+set tmp = < $vmax $(abs($vmin)) 0.5 >
+vecminmax tmp dummy vmax
+define vmax $(0.5*(int($vmax/0.5)+2))
+define vmin $(-1.0*$vmax)
+vecminmax f fmin fmax
+define fmin 0.0
+define fmax $(10.0*(int($fmax/10.0)+2))
+vecminmax h dummy hmax
+define fmax $($fmax+$hmax)
+define R 1.e6
+set vlim = < $vmin $vmax >
+plotminmax vlim xmin xmax 0.0
+define xrange $($xmax-$xmin)
+set flim = < $fmin $fmax >
+plotminmax flim ymin ymax 0.08
+define yrange $($ymax-$ymin)
+set utr = uniq(tr)
+define x 1
+define y 4
+define miny 4
+foreach tran utr {
+  define y $($y-1)
+  if ($y==0 || ($y==1 && DIMEN(utr)==4)) {
+    define y 3
+    define x $($x+1)
+  }
+  if ($y<$miny) {
+    define miny $y
+  }
+  define laby 0
+  if ($x==1) {
+    define laby 2
+  }
+  define labx 0
+  if ($y==1 || ($y==2 && (DIMEN(utr)==4 || DIMEN(utr)==2)) || ($y==3 && $x==3 && DIMEN(utr)==7)) {
+    define labx 1
+  }
+  window -3 -3 $x $y
+  limits $xmin $xmax $ymin $ymax
+  att 1.1 3.0 0 black box $labx $laby 0 0
+  att 3.0 3.0 0 gold relocate $xmin 0.0 draw $xmax 0.0
+  att 3.0 3.0 0 cyan2 relocate 0.0 0.0 draw 0.0 $ymax
+  define k -1
+  do i=0,DIMEN(v) - 1 {
+    if ( $(tr[$i]) == $tran ) {
+       if ($k==-1) {
+         define k $i
+         att 1.2 3.0 0 black
+         relocate $($xmin+0.06*$xrange) $($ymax-0.08*$yrange) putlabel 3 $(ion[$k])$(tr[$k])
+         relocate $($xmax-0.07*$xrange) $($ymax-0.08*$yrange) putlabel 1 $(id[$k])
+       }
+       att 3.0 6.0 0 black
+       relocate $(v[$i]) 0.0 draw $(v[$i]) $(f[$i])
+#      relocate $(v[$i]) $ymin draw $(v[$i]) $(f[$i])
+       angle 90
+       att 0.9 3.0 0 black
+       putlabel 6 \,\,\,$(lab[$i])
+       angle 0
+    }
+  }
+  set totx = $xmin,$xmax,$(($xmax-$xmin)/200.0)
+  set oldtoty = 0.0*totx
+  do i=0,DIMEN(v) - 1 {
+    if ( $(tr[$i]) == $tran ) {
+      set toty = oldtoty + $(f[$i])*exp(-0.5*(totx-$(v[$i]))*(totx-$(v[$i]))/(299792.458/$R)/(299792.458/$R))
+      set oldtoty = toty
+    }
+  }
+  att 3.0 4.0 0 blue connect totx toty
+}
+limits 0.0 1.0 0.0 1.0
+window -1 -1 1 1
+define xlab $($x/6.0)
+define ylab $(0.5+($miny-1)/6.0)
+att 1.6 3.0 0 black
+relocate $xlab $(($miny-1)/3.0-0.065) putlabel 5 Velocity [km\,s^{-1}]
+angle 90
+relocate -0.085 $ylab putlabel 5 Relative intensity [%]
+angle 0
+}
+QUIT
+macro read utilities
+macro read extra_named_colours
+colours
+foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
+term pdf $element"_IHF.pdf"
+#term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
 data $element".dat"
 read { ion 1.s tr 2 o 3 w 4 v 5 f 6 h 7 id 8.s lab 9.s }

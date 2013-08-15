@@ -1,8 +1,0 @@
-MMatomdat.ods: Export each sheet, corresponding to each ion, to a CSV file called MMatomdat_ION.csv
-
-./MMatomdat_csv2atom.csh
-./MMatomdat_atom2spabs.csh MM_VPFIT_DATE_noiso.dat MM_SPABS_DATE_noiso.dat
-./MMatomdat_make_element_CSVs.csh
-./MMatomdat_csv2tex.csh
-
-make paper
