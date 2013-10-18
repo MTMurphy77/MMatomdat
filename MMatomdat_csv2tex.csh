@@ -8,7 +8,7 @@ set OUTSUFFIX = '.tex'
 set TABHEAD = 'MMatomdat_table_head.tex'
 set TABTAIL = 'MMatomdat_table_tail.tex'
 
-foreach ELEMENT ( Mg Al Si Ti Cr Mn Fe Ni Zn )
+foreach ELEMENT ( Na Mg Al Si Ca Ti Cr Mn Fe Ni Zn )
     set CSVFILE = `echo $INPREFIX"_"$ELEMENT$INSUFFIX`
     set OUTFILE = `echo $OUTPREFIX"_"$ELEMENT"-"$OUTVERS$OUTSUFFIX` ; rm -f $OUTFILE; touch $OUTFILE
     set CAPFILE = `echo $INPREFIX"_"$ELEMENT"_caption"$OUTSUFFIX`
