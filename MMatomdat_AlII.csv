@@ -1,13 +1,15 @@
-Updated,13/09/2013,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-Summary,,,,,,,,,,,,,,,,,,,
-Ion,Tran.,Type,A,w [/cm],dw [/cm],X,Ref.,l [Angstroms],dl [Angstroms],dv [m/s],Lower state,Upper state,ID,IP- [eV],IP+ [eV],f or %,Gamma [/s],q [/cm],dq [/cm]
-AlII,1670,ALL,26.9815,59851.976,0.004,0,Griesmann:2000:L113,1670.78861,0.00011,20.0,3\rm{s}^2~^1\rm{S}_0,3\rm{s}3\rm{p}~^1\rm{P}_1,d_1,5.99,18.83,1.74,1.39E+09,270,30
-END,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-Measurements,,,,,,,,,,,,,,,,,,,
-Transition,w [/cm],dw [/cm],Reference,w [/cm],dw [/cm],Reference/Note,l [Ang.],dl [Ang.],,,,,,,,,,,
-1670,59851.976,0.004,Griesmann:2000:L113,59851.976,0.004,Griesmann:2000:L113,1670.78861,0.00011,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,
-References,,,,,,,,,,,,,,,,,,,
-Griesmann:2000:L113,http://adsabs.harvard.edu/abs/2000ApJ...536L.113G,,,,,,,,,,,,,,,,,,
+Updated,26/10/2013,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+Summary,,,,,,,,,,,,,,,,,,,,
+Ion,Tran.,Type,A,w [/cm],dw [/cm],X,Ref.,l [Angstroms],dl [Angstroms],dv [m/s],Lower state,Upper state,ID,IP- [eV],IP+ [eV],f or %,Gamma [/s],q [/cm],dq [/cm],q ref.
+AlII,1670,ALL,26.9815,59851.976,0.004,0,Griesmann:2000:L113,1670.78861,0.00011,20.0,3\rm{s}^2~^1\rm{S}_0,3\rm{s}3\rm{p}~^1\rm{P}_1^{\rm o},d_1,5.99,18.83,1.74,1.39E+09,270,10,"Angstmann:2004:014102,Savukov:2008:042501"
+END,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+Measurements,,,,,,,,,,,,,,,,,,,,
+Transition,w [/cm],dw [/cm],Reference,w [/cm],dw [/cm],Reference/Note,l [Ang.],dl [Ang.],,,,,,,,,,,,
+1670,59851.976,0.004,Griesmann:2000:L113,59851.976,0.004,Griesmann:2000:L113,1670.78861,0.00011,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+References,,,,,,,,,,,,,,,,,,,,
+Angstmann:2004:014102,http://adsabs.harvard.edu/abs/2004PhRvA..70a4102A,,,,,,,,,,,,,,,,,,,
+Griesmann:2000:L113,http://adsabs.harvard.edu/abs/2000ApJ...536L.113G,,,,,,,,,,,,,,,,,,,
+Savukov:2008:042501,http://adsabs.harvard.edu/abs/2008PhRvA..77d2501S,,,,,,,,,,,,,,,,,,,

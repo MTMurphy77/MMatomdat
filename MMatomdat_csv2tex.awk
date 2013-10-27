@@ -143,7 +143,7 @@ BEGIN {
     if (summary==1 && csv[1]!="Ion") {
 	type=csv[3]; split(csv[4],A,";"); A0=A[1]; o=csv[5]; eo=csv[6]; X=csv[7]; w=csv[9]; ew=csv[10]; dv=csv[11]; ffrac=csv[17];
 	ion=""; elem=""; lev=""; tran=""; eqstr=""; lstate=""; ustate=""; id=""; ipl=""; ipu=""; ip=""; q=""; dq="";
-	italic=""; refstr="";
+	italic=""; refstr=""; qrefstr="";
 	gsub("\"","",csv[8]); nref=split(csv[8],ref,",");
 	for (i=1;i<=nref;i++) {
 	    if (!(ref[i] in refs)) { refs[ref[i]]=reflab[iref]; iref++; }
@@ -156,6 +156,12 @@ BEGIN {
 	    }
 	    tran=csv[2]; lstate=csv[12]; ustate=csv[13]; id=csv[14]; ipl=csv[15]; ipu=csv[16]; gamma=csv[18];
 	    q=csv[19]; eq=csv[20];
+	    gsub("\"","",csv[21]); nref=split(csv[21],ref,",");
+	    for (i=1;i<=nref;i++) {
+		if (!(ref[i] in refs)) { refs[ref[i]]=reflab[iref]; iref++; }
+		qrefstr=qrefstr""refs[ref[i]]",";
+	    }
+	    qrefstr=substr(qrefstr,1,length(qrefstr)-1);
 	    f0=ffrac; f=f0;
 	    if (ipl=="0.00") ipl="---";
 	    if (ipu!="") ip=ipl", "ipu;
@@ -170,7 +176,7 @@ BEGIN {
 	ewstr=""; if (ew>0.0) { i=match(ew,"[123456789]"); ewstr="("substr(ew,i)")"; }
 	if (id!="") { sub("_","_{",id); id=id"}"; }
 	sub("%","\\%",ffrac);
-	printf "%-19s %2s%-11s \& %-6s \& %-9s \& %-32s \& %1s \& %13s%-5s \& %4s \& $%-40s$ \& $%-40s$ \& $%-6s$ \& %-12s \& %-9s \& $%5s%-5s$\\\\\n",italic,elem,lev,tran,A0,ostr,X,w,ewstr,dv,lstate,ustate,id,ip,ffrac,q,eqstr;
+	printf "%-19s %2s%-11s \& %-6s \& %-9s \& %-32s \& %1s \& %13s%-5s \& %4s \& $%-40s$ \& $%-40s$ \& $%-6s$ \& %-12s \& %-9s \& $%5s^{%s}%-5s$\\\\\n",italic,elem,lev,tran,A0,ostr,X,w,ewstr,dv,lstate,ustate,id,ip,ffrac,q,qrefstr,eqstr;
     }
 }
 END {
@@ -185,6 +191,6 @@ END {
 	}
     }
     notes=substr(notes,1,length(notes)-2);
-    sub("\\\\citet{Murphy:2013}","This work",notes);
+    sub("\\\\citet{Murphy:2014}","This work",notes);
     printf "%s.}\n",notes;
 }

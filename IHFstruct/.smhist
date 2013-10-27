@@ -1,3 +1,4 @@
+  }
   set totx = $xmin,$xmax,$(($xmax-$xmin)/200.0)
   set oldtoty = 0.0*totx
   do i=0,DIMEN(v) - 1 {
@@ -23,8 +24,8 @@ macro read utilities
 macro read extra_named_colours
 colours
 foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
-#term pdf $element"_IHF.pdf"
-term postfile $element"_IHF.eps"
+term pdf $element"_IHF.pdf"
+#term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
 data $element".dat"
 read { ion 1.s tr 2 o 3 w 4 v 5 f 6 h 7 id 8.s lab 9.s }
@@ -115,7 +116,7 @@ QUIT
 macro read utilities
 macro read extra_named_colours
 colours
-foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
+foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
 term pdf $element"_IHF.pdf"
 #term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
