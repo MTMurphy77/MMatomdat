@@ -1,8 +1,8 @@
-Updated,26/10/2013,,,,,,,,,,,,,,,,,,,
+Updated,09/11/2013,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 Summary,,,,,,,,,,,,,,,,,,,,
 Ion,Tran.,Type,A,w [/cm],dw [/cm],X,Ref.,l [Angstroms],dl [Angstroms],dv [m/s],Lower state,Upper state,ID,IP- [eV],IP+ [eV],f or %,Gamma [/s],q [/cm],dq [/cm],q ref.
-AlII,1670,ALL,26.9815,59851.976,0.004,0,Griesmann:2000:L113,1670.78861,0.00011,20.0,3\rm{s}^2~^1\rm{S}_0,3\rm{s}3\rm{p}~^1\rm{P}_1^{\rm o},d_1,5.99,18.83,1.74,1.39E+09,270,10,"Angstmann:2004:014102,Savukov:2008:042501"
+AlII,1670,ALL,26.9815,59851.976,0.004,0,Griesmann:2000:L113,1670.78861,0.00011,20.0,3\rm{s}^2~^1\rm{S}_0,3\rm{s}3\rm{p}~^1\rm{P}_1^{\rm o},Al^2_1,5.99,18.83,1.74,1.39E+09,270,10,"Angstmann:2004:014102,Savukov:2008:042501"
 END,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,
 Measurements,,,,,,,,,,,,,,,,,,,,

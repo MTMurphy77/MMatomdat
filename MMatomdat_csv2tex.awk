@@ -174,9 +174,9 @@ BEGIN {
 	eostr=""; if (eo>0.0) { i=match(eo,"[123456789]"); eostr="("substr(eo,i)")"; }
 	ostr=o""eostr"$^{"refstr"}$";
 	ewstr=""; if (ew>0.0) { i=match(ew,"[123456789]"); ewstr="("substr(ew,i)")"; }
-	if (id!="") { sub("_","_{",id); id=id"}"; }
+	if (id!="") { sub("\\^","$^",id); sub("_","_{",id); id=id"}$"; }
 	sub("%","\\%",ffrac);
-	printf "%-19s %2s%-11s \& %-6s \& %-9s \& %-32s \& %1s \& %13s%-5s \& %4s \& $%-40s$ \& $%-40s$ \& $%-6s$ \& %-12s \& %-9s \& $%5s^{%s}%-5s$\\\\\n",italic,elem,lev,tran,A0,ostr,X,w,ewstr,dv,lstate,ustate,id,ip,ffrac,q,qrefstr,eqstr;
+	printf "%-19s %2s%-11s \& %-6s \& %-9s \& %-32s \& %1s \& %13s%-5s \& %4s \& $%-40s$ \& $%-40s$ \& %-11s \& %-12s \& %-9s \& $%5s^{%s}%-5s$\\\\\n",italic,elem,lev,tran,A0,ostr,X,w,ewstr,dv,lstate,ustate,id,ip,ffrac,q,qrefstr,eqstr;
     }
 }
 END {

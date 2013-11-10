@@ -1,3 +1,4 @@
+    }
   }
   set totx = $xmin,$xmax,$(($xmax-$xmin)/200.0)
   set oldtoty = 0.0*totx
@@ -23,7 +24,8 @@ QUIT
 macro read utilities
 macro read extra_named_colours
 colours
-foreach element ( Mg Al Si Ti Cr Mn Fe Zn ) {
+#foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
+foreach element ( Na Mg Al Si Ca Ti Cr Mn FeI FeII Zn ) {
 term pdf $element"_IHF.pdf"
 #term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
@@ -116,7 +118,8 @@ QUIT
 macro read utilities
 macro read extra_named_colours
 colours
-foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
+#foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
+foreach element ( Na Mg Al Si Ca Ti Cr Mn FeI FeII Zn ) {
 term pdf $element"_IHF.pdf"
 #term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
@@ -209,7 +212,8 @@ QUIT
 macro read utilities
 macro read extra_named_colours
 colours
-foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
+#foreach element ( Na Mg Al Si Ca Ti Cr Mn Fe Zn ) {
+foreach element ( Na Mg Al Si Ca Ti Cr Mn FeI FeII Zn ) {
 term pdf $element"_IHF.pdf"
 #term postfile $element"_IHF.eps"
 location 3000 32000 3000 32000
