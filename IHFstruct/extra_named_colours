@@ -1,1 +1,214 @@
-/Users/mmurphy/sm/extra_named_colours
+colours
+        ## Greens 
+        ctype = ctype() concat 256*208
+        ctype = ctype(string) concat 'green2'
+        ctype = ctype() concat 256*176
+        ctype = ctype(string) concat 'green3'
+        ctype = ctype() concat 256*144
+        ctype = ctype(string) concat 'green4'
+        ctype = ctype() concat 256*112
+        ctype = ctype(string) concat 'green5'
+        ctype = ctype() concat 256*80
+        ctype = ctype(string) concat 'green6'
+
+        # light greens
+ 
+        ctype = ctype() concat 240+ 256*(255+256*240)
+        ctype = ctype(string) concat 'lightgreen1'
+        ctype = ctype() concat 224+ 256*(255+256*224)
+        ctype = ctype(string) concat 'lightgreen2'
+        ctype = ctype() concat 208+ 256*(255+256*208)
+        ctype = ctype(string) concat 'lightgreen3'
+        ctype = ctype() concat 192+ 256*(255+256*192)
+        ctype = ctype(string) concat 'lightgreen4'
+        ctype = ctype() concat 176+ 256*(255+256*176)
+        ctype = ctype(string) concat 'lightgreen5'
+        ctype = ctype() concat 160+ 256*(255+256*160)
+        ctype = ctype(string) concat 'lightgreen6'
+        ctype = ctype() concat 144+ 256*(255+256*144)
+        ctype = ctype(string) concat 'lightgreen7'
+        ctype = ctype() concat 128+ 256*(255+256*128)
+        ctype = ctype(string) concat 'lightgreen8'
+        ctype = ctype() concat 112+ 256*(255+256*112)
+        ctype = ctype(string) concat 'lightgreen9'
+        ctype = ctype() concat  96+ 256*(255+256*96)
+        ctype = ctype(string) concat 'lightgreen10'
+        ctype = ctype() concat 80+ 256*(255+256*80)
+        ctype = ctype(string) concat 'lightgreen11'
+
+        # Reds
+        ctype = ctype() concat 208
+        ctype = ctype(string) concat 'red2'
+        ctype = ctype() concat 176
+        ctype = ctype(string) concat 'red3'
+        ctype = ctype() concat 144
+        ctype = ctype(string) concat 'red4'
+        ctype = ctype() concat 112
+        ctype = ctype(string) concat 'red5'
+        ctype = ctype() concat 80
+        ctype = ctype(string) concat 'red6'
+
+        # light reds (pinks)
+        ctype = ctype() concat 255 + 256*(240+256*240)
+        ctype = ctype(string) concat 'pink1'
+        ctype = ctype() concat 255 + 256*(224+256*224)
+        ctype = ctype(string) concat 'pink2'
+        ctype = ctype() concat 255 + 256*(208+256*208)
+        ctype = ctype(string) concat 'pink3'
+        ctype = ctype() concat 255 + 256*(192+256*192)
+        ctype = ctype(string) concat 'pink4'
+        ctype = ctype() concat 255 + 256*(176+256*176)
+        ctype = ctype(string) concat 'pink5'
+        ctype = ctype() concat 255 + 256*(160+256*160)
+        ctype = ctype(string) concat 'pink6'
+        ctype = ctype() concat 255 + 256*(144+256*144)
+        ctype = ctype(string) concat 'pink7'
+        ctype = ctype() concat 255 + 256*(128+256*128)
+        ctype = ctype(string) concat 'pink8'
+        ctype = ctype() concat 255 +  256*(112+256*112)
+        ctype = ctype(string) concat 'pink9'
+        ctype = ctype() concat 255 +  256*( 96+256*96)
+        ctype = ctype(string) concat 'pink10'
+        ctype = ctype() concat 255 + 256*( 80+256*80)
+        ctype = ctype(string) concat 'pink11'
+
+        #mixed reds 
+
+        # Blues
+        ctype = ctype() concat 256*256*208
+        ctype = ctype(string) concat 'blue2'
+        ctype = ctype() concat 256*256*176
+        ctype = ctype(string) concat 'blue3'
+        ctype = ctype() concat 256*256*144
+        ctype = ctype(string) concat 'blue4'
+        ctype = ctype() concat 256*256*112
+        ctype = ctype(string) concat 'blue5'
+        ctype = ctype() concat 256*256*80
+        ctype = ctype(string) concat 'blue6'
+
+        # light blues
+        ctype = ctype() concat 224 + 256*(240+256*255)
+        ctype = ctype(string) concat 'lightblue1'
+        ctype = ctype() concat 192 + 256*(224+256*255)
+        ctype = ctype(string) concat 'lightblue2'
+        ctype = ctype() concat 160 + 256*(208+256*255)
+        ctype = ctype(string) concat 'lightblue3'
+        ctype = ctype() concat 128 + 256*(192+256*255)
+        ctype = ctype(string) concat 'lightblue4'
+        ctype = ctype() concat  96 + 256*(176+256*255)
+        ctype = ctype(string) concat 'lightblue5'
+        ctype = ctype() concat  64 + 256*(160+256*255)
+        ctype = ctype(string) concat 'lightblue6'
+        ctype = ctype() concat  32 + 256*(144+256*255)
+        ctype = ctype(string) concat 'lightblue7'
+        ctype = ctype() concat       256*(128+256*255)
+        ctype = ctype(string) concat 'lightblue8'
+
+        ##cyans
+
+        ctype = ctype() concat 256*( 208+256*208)
+        ctype = ctype(string) concat 'cyan2'
+        ctype = ctype() concat 256*( 176+256*176)
+        ctype = ctype(string) concat 'cyan3'
+        ctype = ctype() concat 256*( 144+256*144)
+        ctype = ctype(string) concat 'cyan4'
+
+        ##oranges & yellows
+
+        ctype = ctype() concat 255 + 256*224
+        ctype = ctype(string) concat 'yolk'
+        ctype = ctype() concat 255 + 256*208
+        ctype = ctype(string) concat 'orangeyellow'
+        ctype = ctype() concat 255 + 256*208
+        ctype = ctype(string) concat 'orangeyellow'
+        ctype = ctype() concat 255 + 256*192
+        ctype = ctype(string) concat 'orange1'
+        ctype = ctype() concat 255 + 256*176
+        ctype = ctype(string) concat 'orange2'
+        ctype = ctype() concat 255 + 256*144
+        ctype = ctype(string) concat 'orange3'
+        ctype = ctype() concat 255 + 256*112
+        ctype = ctype(string) concat 'orange4'
+        ctype = ctype() concat 255 + 256*80
+        ctype = ctype(string) concat 'orange5'
+        ctype = ctype() concat 255 + 256*215
+        ctype = ctype(string) concat 'gold'
+        ctype = ctype() concat 255 + 256*(255+256*160)
+        ctype = ctype(string) concat 'lightyellow'
+        ctype = ctype() concat 224 + 256*(255+256*64)
+        ctype = ctype(string) concat 'lemon'
+        ctype = ctype() concat 192 + 256*(255+256*64)
+        ctype = ctype(string) concat 'lime'
+        ctype = ctype() concat 80 + 256*(255+256*64)
+        ctype = ctype(string) concat 'neon'
+
+        ##purples & magentas
+        ctype = ctype() concat 208 + 256*(256*208)
+        ctype = ctype(string) concat 'magenta2'
+        ctype = ctype() concat 176 + 256*(256*176)
+        ctype = ctype(string) concat 'magenta3'
+        ctype = ctype() concat 144 + 256*(256*144)
+        ctype = ctype(string) concat 'magenta4'
+        ctype = ctype() concat 144 + 256*(256*48)
+        ctype = ctype(string) concat 'sauvignon'
+        ctype = ctype() concat 112 + 256*(256*64)
+        ctype = ctype(string) concat 'merlot'
+        ctype = ctype() concat 208 + 256*(256*144)
+        ctype = ctype(string) concat 'redpurple'
+        ctype = ctype() concat 144 + 256*(256*208)
+        ctype = ctype(string) concat 'bluepurple'
+
+        ##browns & olives
+        
+        ctype = ctype() concat 208 + 256*(128)
+        ctype = ctype(string) concat 'brown1'
+        ctype = ctype() concat 192 + 256*(96)
+        ctype = ctype(string) concat 'brown2'
+        ctype = ctype() concat 160 + 256*(64)
+        ctype = ctype(string) concat 'brown3'
+        ctype = ctype() concat 128 + 256*(48)
+        ctype = ctype(string) concat 'brown4'
+        ctype = ctype() concat 112 + 256*(144+256*80)
+        ctype = ctype(string) concat 'olive'
+        
+        ## greys & whites
+
+        ctype = ctype() concat 240 + 256*(240+256*240)
+        ctype = ctype(string) concat 'grey1'
+        ctype = ctype() concat 224 + 256*(224+256*224)
+        ctype = ctype(string) concat 'grey2'
+        ctype = ctype() concat 208 + 256*(208+256*208)
+        ctype = ctype(string) concat 'grey3'
+        ctype = ctype() concat 192 + 256*(192+256*192)
+        ctype = ctype(string) concat 'grey4'
+        ctype = ctype() concat 176 + 256*(176+256*176)
+        ctype = ctype(string) concat 'grey5'
+        ctype = ctype() concat 160 + 256*(160+256*160)
+        ctype = ctype(string) concat 'grey6'
+        ctype = ctype() concat 144 + 256*(144+256*144)
+        ctype = ctype(string) concat 'grey7'
+        ctype = ctype() concat 128 + 256*(128+256*128)
+        ctype = ctype(string) concat 'grey8'
+        ctype = ctype() concat 112 + 256*(112+256*112)
+        ctype = ctype(string) concat 'grey9'
+        ctype = ctype() concat  96 + 256*( 96+256*96 )
+        ctype = ctype(string) concat 'grey10'
+        ctype = ctype() concat  80 + 256*( 80+256*80 )
+        ctype = ctype(string) concat 'grey11'
+        ctype = ctype() concat  64 + 256*( 64+256*64 )
+        ctype = ctype(string) concat 'grey12'
+        ctype = ctype() concat  48 + 256*( 48+256* 48)
+        ctype = ctype(string) concat 'grey13'
+        ctype = ctype() concat  32 + 256*( 32+256* 32)
+        ctype = ctype(string) concat 'grey14'
+        ctype = ctype() concat  16 + 256*( 16+256* 16)
+        ctype = ctype(string) concat 'grey15'
+        ctype = ctype() concat  255 + 256*(255+256* 245)
+        ctype = ctype(string) concat 'offwhite'
+        ctype = ctype() concat  255 + 256*(229+256* 229)
+        ctype = ctype(string) concat 'offwhite'
+
+ 
+
+
+

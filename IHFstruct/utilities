@@ -1,1 +1,71 @@
-/Users/mmurphy/sm/utilities
+att 4 # Set the basic attributes: expand, lweight, ltype, ctype
+      expand $1 lweight $2 ltype $3 ctype $4
+
+min 3 # Finds the minimum of the two input numbers
+      if ($1 < $2) {
+        define $3 $1
+      else {
+        define $3 $2
+      }
+
+max 3 # Finds the maximum of the two input numbers
+      if ($1 > $2) {
+        define $3 $1
+      else {
+        define $3 $2
+      }
+
+logyerr 3 # To put an error bar (with the current line settings) in Log
+          # space when input y values have already been logged but input
+          # dy values have not. Taken from intrinsic sm macro logerr.
+          # Usage: logerr x y dy, where y is logged, and dy isn't
+          # WARNING: This utility in incomplete! No lower errorbar!
+          define i local
+	  foreach i (_y d_y) {
+	    set $i local
+	  }
+          set _y = 10**$2
+	  set d_y = LG(_y + $3) - $2
+	  errorbar $1 $2 d_y 2
+
+plotminmax  4   # To determine the minimum and maximum of a vector and to
+                # add a little bit extra either way so that the output
+                # numbers can be used as plotting limits. Use plotminmax_e
+                # if there are errorbars to be considered
+                # Usage: vector_input min max fraction_added
+                define i local
+		foreach i (_range _min _max) {
+		  set $i local
+		}
+                vecminmax $1 _min _max
+		define _range ($_max - $_min)
+		define $2 ($_min - $_range*$4)
+		define $3 ($_max + $_range*$4)
+
+plotminmax_e  5 # Same as plotminmax except to be used when an error array
+                # exists
+                # Usage: vector_input error_input vector_min vector_out
+                # fraction_added
+                define i local
+		foreach i (_range _value_minus_error _value_plus_error _min _max _dummy) {
+		  set $i local
+		}
+		set _value_minus_error = $1 - $2
+		set _value_plus_error = $1 + $2
+		vecminmax _value_minus_error _min _dummy
+		vecminmax _value_plus_error _dummy _max
+		define _range ($_max - $_min)
+		define $3 ($_min - $_range*$5)
+		define $4 ($_max + $_range*$5)
+
+uniq 1          # Remove duplicate elements of $1, e.g. u = uniq(x)
+		# If you sort first, you'll get one element for each distinct
+		# value in the original vector (c.f. unix's uniq command)
+		set $0 = $1
+		set _$00 = $0 concat $0[dimen($0)-1]
+		set _$01 = $0[0]+$0[0] concat $0
+		# ensure that the first elem is uniq; this isn't true if $1[0]
+		# is arithmetic and 0, but then it's safe to simply set it to 1
+		if('$(_$01[0])' == '0') { set _$01[0] = 1 }
+		set $0 = _$00 if(_$00 != _$01)
+		DELETE _$00 DELETE _$01

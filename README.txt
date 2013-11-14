@@ -1,8 +1,26 @@
-This directory includes the supplementary information for Murphy & Berengut (2014, MNRAS, submitted).
+MMatomdat
+=========
+
+Laboratory Atomic Transition Data for Precise Optical Quasar Absorption Spectroscopy.
+
+Current version: 10/11/2013
+
+This database includes the supplementary information for Murphy & Berengut (2014, MNRAS, accepted, arXiv:1311.2949).
 
 The master spreadsheet is MMatomdat.ods in OpenDocument format. This is also exported to MMatomdat.xlsx for opening with Microsoft Office-compatible software. See the notes in the MMatomdat.[ods,xlsx] spreadsheet for more details.
 
-Included in this directory is also a series of scripts (AWK and C-Shell) which convert the CSV versions of each of the sheets in MMatomdat.ods into tables which are either useful as input to different quasar absorption analysis codes (e.g. VPFIT), or for visualizing the isotopic/hyperfine structures in velocity space (a la Figures 1-10 in Murphy & Berengut 2014). The commands and sequence for executing these scripts is described below.
+Included in this directory is also a series of scripts (AWK and C-Shell) which convert the CSV versions of each of the sheets in MMatomdat.ods into tables which are either useful as input to different quasar absorption analysis codes (e.g. VPFIT), or for visualizing the isotopic/hyperfine structures in velocity space (as in Figures 1-10 in Murphy & Berengut 2014). The commands and sequence for executing these scripts are described below.
+
+Possibly the most useful of these products for many people is perhaps the input atomic data files for use in the absorption profile fitting code VPFIT (http://www.ast.cam.ac.uk/~rfc/vpfit.html). These files have the atomic data updated for "Many Multiplet" (MM) transitions in the Summary tables of MMatomdat.ods:
+
+  - MM_VPFIT_[VERSION_DATE]_noiso.dat: Composite wavelengths are used for MM transitions, except for AlIII and MnII which have such widely-spaced hyperfine structure that using only composite wavelengths lead to systematic errors in most analyses.
+
+  - MM_VPFIT_[VERSION_DATE].dat: Full isotopic and hyperfine structures for all MM transitions.
+
+These files were derived from the "atom.dat" distributed in VPFIT Version 10, accessed on 2011-09-05. That file is included in this directory for reference ('VPFIT10_atom_2011-09-05.dat').
+
+
+Here is the sequence of commands for reproducing the CSV, ASCII and LaTeX tables, plus the figures, by executing the scripts in this directory are as follows:
 
 Step 1: Export each sheet, corresponding to each ion, from MMatomdat.ods to a CSV file called MMatomdat_ION.csv (e.g. MMatomdat_MgII.csv). Best to use an OpenDocument compatible program for this (e.g. LibreOffice).
 
@@ -23,7 +41,8 @@ Step 6: Run the MMatomdat_csv2isodat.csh file to export the isotopic/hyperfine s
 cd IHFstruct; sm < iso.sm; cd ../
 
 -----
-Note: For version 2013-11-10, for production of Murphy:2014, Steps 4-6 were replaced with the following steps to separate the FeI and FeII tables:
+Note: For version 2013-11-10, for production of Murphy:2014, where FeI was not included, Steps 4-6 were replaced with the following steps to separate the FeI and FeII tables:
+
 \mv -f MMatomdat_FeII.csv tempFeII.csv; \rm -f MMatomdat_Fe.csv
 ./MMatomdat_make_element_CSVs.csh; ./MMatomdat_csv2tex.csh; ./MMatomdat_csv2isodat.csh
 \mv MM_Fe-2013-11-10.tex MM_FeI-2013-11-10.tex; \mv IHFstruct/Fe.dat IHFstruct/FeI.dat
@@ -37,4 +56,3 @@ Note: For version 2013-11-10, for production of Murphy:2014, Steps 4-6 were repl
 ./MMatomdat_make_element_CSVs.csh; ./MMatomdat_csv2tex.csh; ./MMatomdat_csv2isodat.csh
 cd IHFstruct; sm < iso.sm; cd ../
 -----
-
